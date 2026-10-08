@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to IGHUB</title>
+    <link rel="stylesheet" href="./css file/style.css">
+</head>
+<style>
+    table{
+        margin-top: 50px;
+    }
+
+    table tr{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    table td{
+        padding: 20px;
+    }
+    input[type="text"]{
+      border: 1px solid;
+    }
+    .error{
+        outline: 2px solid red;
+    }
+    .excellent{
+        outline: 1px solid yellowgreen;
+    }
+</style>
+<body>
+    <!-- <h1 id="main-heading">Testing selection Javascript</h1>
+    <p class="paragraph" id="main-heading">Let's</p>
+
+    <!-- <ul>
+        <li class="list-items">List 1</li>
+        <li class="list-items">list 2</li>
+        <li class="list-items">List 3</li>
+        <li class="list-items">List 4</li>
+        <li class="list-items">List 5</li>
+    </ul>
+
+    <div class="header" id="test-id1">
+        <p>This is a paragraph nested inside a div</p>
+        <p id="p-2">This is a paragraph nested inside a div</p>
+        <p>This is a paragraph nested inside a div</p>
+        <p>This is a paragraph nested inside a div</p>
+        <p>This is a paragraph nested inside a div</p>
+    </div>
+
+    <div id="test-id2">
+        <p>DOM class</p>
+        <p>I,am learning DOM</p>
+    </div> -->
+        <!-- <input type="text" id="style-input">
+       <div class="container" id="test-id1">
+        <p>This is a paragraph nested inside a div</p>
+        <p id="">This is a paragraph nested inside a div</p>
+        <p>This is a paragraph nested inside a div</p>
+        <p>This is a paragraph nested inside a div</p>
+        <p>This is a paragraph nested inside a div</p>
+    </div>
+
+    <div>
+        <input type="radio" name="payment" value="credit">Credpal
+        <input type="radio" name="payment" value="paypal">Paypal
+        <input type="radio" name="payment" value="cash">Cashapp
+        <input type="radio" name="payment" value="crypto">Pay with Crypto
+        <input type="radio" name="payment" value="naira">Pay with naira
+    </div>
+
+    <table>
+        <tr>
+            <td>row1 col1</td>
+            <td>row2 col2</td>
+            <td>row3 col3</td>
+        </tr>
+
+        <tr>
+            <td>row2 col1</td>
+            <td>row2 col2</td>
+            <td>row2 col3</td>
+        </tr>
+
+        <tr>
+            <td>row3 col1</td>
+            <td>row3 col2</td>
+            <td>row3 col3</td>
+        </tr>
+
+        <tr>
+            <td>row4 col1</td>
+            <td>row4 col2</td>
+            <td>row4 col3</td>
+        </tr>
+
+        <tr>
+            <td>row5 col1</td>
+            <td>row5 col2</td>
+            <td>row5 col3</td>
+        </tr>
+
+        <tr>
+            <td>row6 col1</td>
+            <td>row6 col2</td>
+            <td>row6 col3</td>
+        </tr>
+
+        <tr>
+            <td>row7 col1</td>
+            <td>row7 col2</td>
+            <td>row7 col3</td>
+        </tr>
+
+        <tr>
+            <td>row8 col1</td>
+            <td>row8 col2</td>
+            <td>row8 col3</td>
+        </tr>
+
+        <tr>
+            <td>row9 col1</td>
+            <td>row9 col2</td>
+            <td>row9 col3</td>
+        </tr>
+
+        <tr>
+            <td>row10 col1</td>
+            <td>row10 col2</td>
+            <td>row10 col3</td>
+        </tr>
+
+        <tr>
+            <td>row11 col1</td>
+            <td>row11 col2</td>
+            <td>row11 col3</td>
+        </tr>
+
+        <tr>
+            <td>row12 col1</td>
+            <td>row12 col2</td>
+            <td>row12 col3</td>
+        </tr>
+
+        <tr>
+            <td>row13 col1</td>
+            <td>row13 col2</td>
+            <td>row13 col3</td>
+        </tr>
+
+        <tr>
+            <td>row14 col1</td>
+            <td>row14 col2</td>
+            <td>row14 col3</td>
+        </tr>
+
+        <tr>
+            <td>row15 col1</td>
+            <td>row15 col2</td>
+            <td>row15 col3</td>
+        </tr>
+
+         <tr>
+            <td>row16 col1</td>
+            <td>row16 col2</td>
+            <td>row16 col3</td>
+        </tr>
+
+         <tr>
+            <td>row17 col1</td>
+            <td>row17 col2</td>
+            <td>row17 col3</td>
+        </tr>
+
+         <tr>
+            <td>row18 col1</td>
+            <td>row18 col2</td>
+            <td>row18 col3</td>
+        </tr>
+
+         <tr>
+            <td>row19 col1</td>
+            <td>row19 col2</td>
+            <td>row19 col3</td>
+        </tr>
+
+        <tr>
+            <td>row20 col1</td>
+            <td>row20 col2</td>
+            <td>row20 col3</td>
+        </tr>
+    </table>
+
+
+    <!-- Boxes DIV -->
+    <!-- <div class="boxes">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">
+            Box 3.2
+            <span class="box">
+                Box 3.4
+                <span class="box">
+                    Box 3.6
+                </span>
+                Box 3.8
+            </span>
+        </div>
+    </div>  -->
+
+   <!-- <form action="">
+    <input type="text" name="username" placeholder="enter your name">Username
+    <input type="password" name="password"> Password <br>
+    <input type="submit" value="Sumbit"> <br>
+    <p class="feedback"></p>
+    <button class="disable-btn" ></button>
+   </form> -->
+
+   <!-- <button id="btn">Click Me</button>
+
+   <button id="mybtn" onclick> Click to start counting</button>
+   <p id="count">0 Ckay</p>
+
+   <button onclick="ViewTimeline()" id="Money">Click to see date</button>
+   <p id="demo"></p> -->
+
+   <div id="ternary">
+    <ul id="list<link href="https://fonts.googleapis.com/css?family=Google+Sans+Code:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />">
+
+   </ul></div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
