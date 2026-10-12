@@ -168,6 +168,9 @@ console.log(copy);
  console.log(`${my}  ${item}`);
  
 })
+
+[1,3,4,5,6, 'string', null, undefined].forEach(item => console.log(item),
+)
 // function richard (dave, name){
 //   dave(name)
 // }
