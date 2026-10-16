@@ -8,7 +8,6 @@
 //  cb()
 // }
 
-
 //  function task3 (cb){
 //     console.log('Task 3 Completed')
 //  cb()
@@ -36,7 +35,7 @@
 // function task5(callback){
 //     callback()
 //     console.log('This is task5');
-    
+
 // }
 
 // function task11(cb){
@@ -73,13 +72,13 @@
 //        task14( ()=>{
 //          console.log('All task completed');
 //        })
-//      })   
+//      })
 //   })
 // })
 
 // function pause(time, cb){
 //     console.log("seconds since 19/0:" + Date.now() / 1000);
-    
+
 //     const stopTime = Date.now() + (time * 1000)
 
 //     while(Date.now() < stopTime){
@@ -91,20 +90,19 @@
 
 // pause(5, ()=>{
 //     console.log("This will show up after 5 seconds");
-    
-// })
 
+// })
 
 //* UNDERSTANDING HIGHER ORDER FUNCTION
 //*THE USE OF CALLBACKS and ITERANLES
 
-const users = [
-    { id: 1, name: "MrMe", age: 24, active: false},
-    { id: 2, name: "juliet", age: 21, active: true},
-    { id: 3, name: "Richard", age: 19, active: true},
-    { id: 4, name: "Favour", age: 23, active: true},
-    { id: 5, name: "Traitor", age: 17, active: true},
-];
+// const users = [
+//     { id: 1, name: "MrMe", age: 24, active: false},
+//     { id: 2, name: "juliet", age: 21, active: true},
+//     { id: 3, name: "Richard", age: 19, active: true},
+//     { id: 4, name: "Favour", age: 23, active: true},
+//     { id: 5, name: "Traitor", age: 17, active: true},
+// ];
 
 //? Using for...of
 
@@ -135,44 +133,427 @@ const users = [
 // const arr2 = [4, 5, 6,21, 45];
 // console.log(Math.max(...arr2));
 
-
-
 // function largestNum(...max) {
 // let myNum = numbers[0]
 // for (max of numbers) {
 //     if (max > myNum) {
 //         myNum = max
 //     }
-//       return myNum  
+//       return myNum
 // }
 // }
 // console.log();
 
+//
 
-// 
+// const obj = { a: 1, b: 2};
+// const copy = {...obj, c:3}
 
-
-const obj = { a: 1, b: 2};
-const copy = {...obj, c:3}
-
-console.log(copy);
-
-
+// console.log(copy);
 
 //HIGHER ORDER ARRAY METHODS
 //These are strictly for Array, they do not work on all iterables
 
 //? forEach()
 
-[1,3,4,5,6, 'string', null, undefined].forEach(function(my, item){
- console.log(`${my}  ${item}`);
- 
-})
+// [1,3,4,5,6, 'string', null, undefined].forEach(function(my, item){
+//  console.log(`${my}  ${item}`);
 
-[1,3,4,5,6, 'string', null, undefined].forEach(item => console.log(item),
-)
+// })
+
+// [1,3,4,5,6, 'string', null, undefined].forEach(item => console.log(item),
+// )
 // function richard (dave, name){
 //   dave(name)
 // }
 
 // richard(console.log, 'my people be still')
+
+//Modification
+// function modifyArray(array, callback){
+//     for(let i = 0; i < array.length; i++){
+//         array[i] = callback(array[i]);
+//     }
+// }
+
+// const testingArray = [1,3,4,5,6,7,8]
+// modifyArray(testingArray, (number)=> {
+//     return number + 100
+// })
+
+// console.log(testingArray);
+
+//modify array for forEach
+// numArray
+
+// const names = ["Richard", "Favour", "Juliet", "Emmanuel"];
+
+// const nameOlder = document.getElementsByClassName('name')
+
+// nameOlder[0].innerHTML += '<div class= "name">Richard</div>'
+// nameOlder[1].innerHTML += '<div class= "name">Favour</div>'
+// nameOlder[2].innerHTML += '<div class= "name">Juliet</div>'
+// nameOlder[3].innerHTML += '<div class= "name">Emmanuel</div>'
+
+// console.log(nameOlder[0].innerHTML);
+
+// console.log(nameOlder);
+
+//forEach
+// names.forEach( (n) => {
+
+// })
+
+//map
+// const listElements =names.map( (name) =>{
+//     const li = document.createElement('li')
+//     li.textContent = name
+
+//     return li
+// })
+
+// console.log(listElements);
+
+// listElements.forEach( (item) =>{
+//     list.appendChild(item)
+// })
+
+//new map
+// const elementString = names.map( (name) =>{
+//     return `<li>${name}</li>`
+// })
+
+// console.log(elementStrings);
+// console.log(elementStrings.join(''));
+
+// const reviews = [
+//   [
+//     "When my daughter was in Jss2 at her previous school, computer class meant copying routes offa blackboard. By the end of Jss3 at Aba premier she was building responsive web pages and wiring circuits",
+//     "EO",
+//     "Engr.Emeka onyekachi",
+//     "GRA Aba, parent of an SS1 student",
+//     0,
+//   ],
+//   [
+//     "The reliable power was a big deciding factor for us, During a city-wide outage, the classrooms were still cool,bright and quiet, with no diesel fumes and no disrupted experiments.",
+//     "CN",
+//     "Chief (Mrs.) Chinyere Nwachukwu",
+//     "Ogbor Hill, parent of Jss2 & SS2 students",
+//     0,
+//   ],
+//   [
+//     "I represented Abia State at the National Young Inventors Robotics Championship in Abuja. Everything we used on stage was taught in our STEM lab",
+//     "KU",
+//     "Kamsiyochukwu U",
+//     "Head Boy, Class of 2024 (9 AIs in WAEC)",
+//     1,
+//   ],
+// ];
+
+// const review = document.getElementById("reviews");
+// const newReview = reviews.map((reviews) => {
+//   return `<div>
+//     <p>${reviews[0]}</p>
+//     <h1>${reviews[1]}</h1>
+//     <h2>${reviews[2]}</h2>
+//     <h3>${reviews[3]}</h3>
+//     <li>${reviews[4]}</li>
+//     </div>
+//     `;
+// });
+// review.innerHTML = newReview.join('');
+// console.log(review);
+// console.log(review.join(...newReview));
+
+
+// Filter() - checks for items who pass a certain condition and returns a new array with the items that pass the condition
+// the callback function should return a boolean value (true or false)
+// that should be kept or filtered out of the new array
+// that also means that any item that returns true will be kept in the new array and any item that returns false will be filtered out of the new array
+
+// const names = ["Richard", "Favour", "Juliet", "Emmanuel"];
+
+// console.log(names.filter( (name) =>{
+
+//   if (name.length === 6){
+//     return true
+//   }
+// }));
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const test = numbers[0] >= 5;
+// console.log(test);
+
+// const newArray = numbers.filter((number) => {
+//   if(number <= 5){
+//     return true
+//   }
+//   return number
+// });
+
+// console.log(newArray);
+
+// function filterfunc(array, callback){
+//   const newArray = [];
+
+//   for(i = 0; i < array.length; i++){
+
+//     if(callback(array[i]) === underfined){
+//       continue //skip
+//     }
+
+//   newArray.push(callback(array[i]))
+//   }
+//   return newArray
+// }
+
+// console.log(filterfunc([1,2,3,99,88,29,12,9], (number) => {
+//   if(number >= 50){
+//     return number
+//   }
+// }));
+
+// const user = [
+//   {name:'Ckay', age:12, Active: false},
+//   {name: 'MrFun', age:50, Active: true},
+//   {name: 'Favour', age: 100, Active:true},
+//   {name: 'ikuku', age: 9, Active: false},
+// ]
+
+// console.log(user.filter ( (user) =>{
+//   if(user.age < 18)
+//     return false
+//  if(user.Active === false)
+//     return false
+//  return true
+// }));
+
+// const eligibleUsers = user.filter((user) => {
+//   if (!user.active) return false;
+//   if (user.age < 18) return false;
+  
+//   return user;
+// })
+
+// const eligibileUsersArr = user.filter(isEligible)
+// console.log(eligibileUsersArr);
+
+// function isEligible(user){
+//   if(!user.active) return false;
+//   if(user.age <= 18) return false;
+
+//   return user
+// }
+
+// const people = [
+//   {firstName: 'Alice', lastName: 'Smith', age: 30},
+//   {firstName: 'Bob', lastName: 'Jones', age: 25},
+//   {firstName: 'Cara', lastName: 'Smith', age: 35},
+//   {firstName: 'David', lastName: 'Brown', age: 25},
+//   {firstName: 'Eve', lastName: 'Jones', age: 28},
+//   {firstName: 'Frank', lastName: 'Smith', age: 25},
+//   {firstName: 'Grace', lastName: 'Brown', age: 35},
+//   {firstName: 'Heidi', lastName: 'Adams', age: 28},
+// ]
+
+// console.log(people.filter( (people)=>{
+// if(people.age < 30)
+//   return false
+// return true
+// }));
+// const repeatedNames = people.filter((person, index, array) =>
+//   array.filter(p => p.lastName === person.lastName).length > 1
+// );
+
+// console.log(repeatedNames);
+
+//? .reduce(callback, initialValue) - its takes a callback function and an initial value as arguments. It reduces the array to a single value by applying the callback function to each element of the array, accumulating the result. The callback function takes four arguments: accumulator, currentValue, currentIndex, and array. The initialValue is optional and is used as the first argument to the first call of the callback function. If no initialValue is provided, the first element of the array will be used as the initial accumulator value, and the iteration will start from the second element.
+//* That value can be a number, string, object,array and anything
+
+// const num = [1, 2, 3, 4, 5];
+// const sumofNums = nums.reduce((accumulator, currentValue) =>{
+//     return accumulator + currentValue
+// }, 10)
+// console.log(sumofNums);
+
+// const foodItems = [ 'Eba', 'Rice', 'Beans', 'Yam',]
+
+// const foodString = foodItems.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue + " "
+// }, "")
+
+// console.log(foodString);
+
+// const result = votes.reduce( (acc, vote) =>{
+//     if(!acc[vote]) {
+//         acc[vote] = 0
+//     }
+
+//     acc[vote] = acc[vote] + 1
+
+//     return acc
+// }, {})
+
+// console.log(result);
+
+const customers = [
+  {
+    id: 1,
+    firstName: "James",
+    lastName: "Anderson",
+    age: 28,
+    gender: "Male",
+    email: "james.anderson@example.com",
+    totalSpent: 450000,
+    accountStatus: "Active"
+  },
+  {
+    id: 2,
+    firstName: "Grace",
+    lastName: "Okafor",
+    age: 34,
+    gender: "Female",
+    email: "grace.okafor@example.com",
+    totalSpent: 2850000,
+    accountStatus: "Active"
+  },
+  {
+    id: 3,
+    firstName: "Michael",
+    lastName: "Bello",
+    age: 22,
+    gender: "Male",
+    email: "michael.bello@example.com",
+    totalSpent: 18000,
+    accountStatus: "Active"
+  },
+  {
+    id: 4,
+    firstName: "Amina",
+    lastName: "Yusuf",
+    age: 41,
+    gender: "Female",
+    email: "amina.yusuf@example.com",
+    totalSpent: 360000,
+    accountStatus: "Active"
+  },
+  {
+    id: 5,
+    firstName: "David",
+    lastName: "Okonkwo",
+    age: 31,
+    gender: "Male",
+    email: "david.okonkwo@example.com",
+    totalSpent: 1725000,
+    accountStatus: "Active"
+  },
+  {
+    id: 6,
+    firstName: "Blessing",
+    lastName: "Adeyemi",
+    age: 26,
+    gender: "Female",
+    email: "blessing.adeyemi@example.com",
+    totalSpent: 135000,
+    accountStatus: "Active"
+  },
+  {
+    id: 7,
+    firstName: "Samuel",
+    lastName: "Ibrahim",
+    age: 52,
+    gender: "Male",
+    email: "samuel.ibrahim@example.com",
+    totalSpent: 5200000,
+    accountStatus: "Active"
+  },
+  {
+    id: 8,
+    firstName: "Faith",
+    lastName: "Nwosu",
+    age: 19,
+    gender: "Female",
+    email: "faith.nwosu@example.com",
+    totalSpent: 7500,
+    accountStatus: "Active"
+  },
+  {
+    id: 9,
+    firstName: "Peter",
+    lastName: "Eze",
+    age: 37,
+    gender: "Male",
+    email: "peter.eze@example.com",
+    totalSpent: 2100000,
+    accountStatus: "Inactive"
+  },
+  {
+    id: 10,
+    firstName: "Esther",
+    lastName: "Olawale",
+    age: 29,
+    gender: "Female",
+    email: "esther.olawale@example.com",
+    totalSpent: 525000,
+    accountStatus: "Active"
+  }
+]
+
+
+
+const newCustomers = customers.map (customer => {
+    const title = customer.gender === "Male" ? 'Mr' : 'Mrs'
+   
+    return {
+        ...customer,
+        full: `${title} ${customer.firstName} ${customer.lastName}`
+    };
+});
+console.log(newCustomers);
+
+const Customertotal = customers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.totalSpent 
+}, 0)
+
+console.log(Customertotal);
+
+ 
+const Customeremail = customers.filter((customer) =>
+    customer.email.includes('esther.olawale@example.com')
+ );
+
+console.log(Customeremail);
+
+
+
+const Customerstatus = customers.filter((customer) =>
+    customer.accountStatus.includes("Inactive")
+ );
+
+console.log(Customerstatus);
+
+const Customerspent = customers.filter((customer) =>
+    customer.gender == "Male"
+ );
+const totalSpentByMales = Customerspent.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.totalSpent 
+}, 0)
+console.log(totalSpentByMales);
+
+const femaleCustomer = customers.filter((customer) =>{
+    return customer.gender == "Female"
+});
+const totalSpentByFemales = femaleCustomer.reduce((accumulator, currentValue) =>{
+    return accumulator + currentValue.totalSpent
+}, 0)
+console.log(totalSpentByFemales);
+
+const customerAverage = customers.reduce((accumulator, currentValue) =>{
+ return accumulator + currentValue.age
+}, 0)
+const averageAge = customers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.age
+}, 0) / customers.length;
+console.log(averageAge);

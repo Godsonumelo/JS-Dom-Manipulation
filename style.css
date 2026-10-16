@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#reviews-container{
+    background-color: red;
+    gap: 2rem;
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    
+}
+body{
+    background-color: white;
+}
