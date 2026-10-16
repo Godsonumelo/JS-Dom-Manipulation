@@ -550,10 +550,46 @@ const totalSpentByFemales = femaleCustomer.reduce((accumulator, currentValue) =>
 }, 0)
 console.log(totalSpentByFemales);
 
-const customerAverage = customers.reduce((accumulator, currentValue) =>{
- return accumulator + currentValue.age
-}, 0)
 const averageAge = customers.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.age
 }, 0) / customers.length;
 console.log(averageAge);
+const numberofFemales = customers.filter((customer) =>{
+    return customer.gender === "Female"
+}).length;
+
+const averageAgeofFemale = customers.filter((customer) => { 
+    return customer.gender === "Female" 
+}).reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.age
+}, 0) /numberofFemales
+console.log(averageAgeofFemale);
+
+const numberofMales = customers.filter((customer) =>{
+    return customer.gender === "Male"
+}).length;
+
+const averageAgeofMale = customers.filter((customer) => {
+    return customer.gender === "Male"
+}).reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.age
+}, 0) / numberofMales
+console.log(averageAgeofMale);
+
+const highestSpender = customers.reduce((highest, current) => {
+    return current.totalSpent > highest.totalSpent ? current : highest;
+}, customers[0]);
+
+console.log(highestSpender);
+
+let highestSpend = 0
+
+for(let i = 0; i < customers.length; i++){
+    if(customers[i].totalSpent > highestSpend){
+        highestSpend = customers[i].totalSpent;
+    }
+}
+const highestspenders = customers.filter((customer) =>{
+    return customer.totalSpent === highestSpend
+}) ;
+console.log(highestspenders);
