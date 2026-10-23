@@ -398,198 +398,438 @@
 
 // console.log(result);
 
-const customers = [
-  {
-    id: 1,
-    firstName: "James",
-    lastName: "Anderson",
-    age: 28,
-    gender: "Male",
-    email: "james.anderson@example.com",
-    totalSpent: 450000,
-    accountStatus: "Active"
-  },
-  {
-    id: 2,
-    firstName: "Grace",
-    lastName: "Okafor",
-    age: 34,
-    gender: "Female",
-    email: "grace.okafor@example.com",
-    totalSpent: 2850000,
-    accountStatus: "Active"
-  },
-  {
-    id: 3,
-    firstName: "Michael",
-    lastName: "Bello",
-    age: 22,
-    gender: "Male",
-    email: "michael.bello@example.com",
-    totalSpent: 18000,
-    accountStatus: "Active"
-  },
-  {
-    id: 4,
-    firstName: "Amina",
-    lastName: "Yusuf",
-    age: 41,
-    gender: "Female",
-    email: "amina.yusuf@example.com",
-    totalSpent: 360000,
-    accountStatus: "Active"
-  },
-  {
-    id: 5,
-    firstName: "David",
-    lastName: "Okonkwo",
-    age: 31,
-    gender: "Male",
-    email: "david.okonkwo@example.com",
-    totalSpent: 1725000,
-    accountStatus: "Active"
-  },
-  {
-    id: 6,
-    firstName: "Blessing",
-    lastName: "Adeyemi",
-    age: 26,
-    gender: "Female",
-    email: "blessing.adeyemi@example.com",
-    totalSpent: 135000,
-    accountStatus: "Active"
-  },
-  {
-    id: 7,
-    firstName: "Samuel",
-    lastName: "Ibrahim",
-    age: 52,
-    gender: "Male",
-    email: "samuel.ibrahim@example.com",
-    totalSpent: 5200000,
-    accountStatus: "Active"
-  },
-  {
-    id: 8,
-    firstName: "Faith",
-    lastName: "Nwosu",
-    age: 19,
-    gender: "Female",
-    email: "faith.nwosu@example.com",
-    totalSpent: 7500,
-    accountStatus: "Active"
-  },
-  {
-    id: 9,
-    firstName: "Peter",
-    lastName: "Eze",
-    age: 37,
-    gender: "Male",
-    email: "peter.eze@example.com",
-    totalSpent: 2100000,
-    accountStatus: "Inactive"
-  },
-  {
-    id: 10,
-    firstName: "Esther",
-    lastName: "Olawale",
-    age: 29,
-    gender: "Female",
-    email: "esther.olawale@example.com",
-    totalSpent: 525000,
-    accountStatus: "Active"
-  }
-]
+// const customers = [
+//   {
+//     id: 1,
+//     firstName: "James",
+//     lastName: "Anderson",
+//     age: 28,
+//     gender: "Male",
+//     email: "james.anderson@example.com",
+//     totalSpent: 450000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 2,
+//     firstName: "Grace",
+//     lastName: "Okafor",
+//     age: 34,
+//     gender: "Female",
+//     email: "grace.okafor@example.com",
+//     totalSpent: 2850000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 3,
+//     firstName: "Michael",
+//     lastName: "Bello",
+//     age: 22,
+//     gender: "Male",
+//     email: "michael.bello@example.com",
+//     totalSpent: 18000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 4,
+//     firstName: "Amina",
+//     lastName: "Yusuf",
+//     age: 41,
+//     gender: "Female",
+//     email: "amina.yusuf@example.com",
+//     totalSpent: 360000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 5,
+//     firstName: "David",
+//     lastName: "Okonkwo",
+//     age: 31,
+//     gender: "Male",
+//     email: "david.okonkwo@example.com",
+//     totalSpent: 1725000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 6,
+//     firstName: "Blessing",
+//     lastName: "Adeyemi",
+//     age: 26,
+//     gender: "Female",
+//     email: "blessing.adeyemi@example.com",
+//     totalSpent: 135000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 7,
+//     firstName: "Samuel",
+//     lastName: "Ibrahim",
+//     age: 52,
+//     gender: "Male",
+//     email: "samuel.ibrahim@example.com",
+//     totalSpent: 5200000,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 8,
+//     firstName: "Faith",
+//     lastName: "Nwosu",
+//     age: 19,
+//     gender: "Female",
+//     email: "faith.nwosu@example.com",
+//     totalSpent: 7500,
+//     accountStatus: "Active"
+//   },
+//   {
+//     id: 9,
+//     firstName: "Peter",
+//     lastName: "Eze",
+//     age: 37,
+//     gender: "Male",
+//     email: "peter.eze@example.com",
+//     totalSpent: 2100000,
+//     accountStatus: "Inactive"
+//   },
+//   {
+//     id: 10,
+//     firstName: "Esther",
+//     lastName: "Olawale",
+//     age: 29,
+//     gender: "Female",
+//     email: "esther.olawale@example.com",
+//     totalSpent: 525000,
+//     accountStatus: "Active"
+//   }
+// ]
 
 
 
-const newCustomers = customers.map (customer => {
-    const title = customer.gender === "Male" ? 'Mr' : 'Mrs'
+// const newCustomers = customers.map (customer => {
+//     const title = customer.gender === "Male" ? 'Mr' : 'Mrs'
    
-    return {
-        ...customer,
-        full: `${title} ${customer.firstName} ${customer.lastName}`
-    };
-});
-console.log(newCustomers);
+//     return {
+//         ...customer,
+//         full: `${title} ${customer.firstName} ${customer.lastName}`
+//     };
+// });
+// console.log(newCustomers);
 
-const Customertotal = customers.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.totalSpent 
-}, 0)
+// const Customertotal = customers.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue.totalSpent 
+// }, 0)
 
-console.log(Customertotal);
+// console.log(Customertotal);
 
  
-const Customeremail = customers.filter((customer) =>
-    customer.email.includes('esther.olawale@example.com')
- );
+// const Customeremail = customers.filter((customer) =>
+//     customer.email.includes('esther.olawale@example.com')
+//  );
 
-console.log(Customeremail);
+// console.log(Customeremail);
 
 
 
-const Customerstatus = customers.filter((customer) =>
-    customer.accountStatus.includes("Inactive")
- );
+// const Customerstatus = customers.filter((customer) =>
+//     customer.accountStatus.includes("Inactive")
+//  );
 
-console.log(Customerstatus);
+// console.log(Customerstatus);
 
-const Customerspent = customers.filter((customer) =>
-    customer.gender == "Male"
- );
-const totalSpentByMales = Customerspent.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.totalSpent 
-}, 0)
-console.log(totalSpentByMales);
+// const Customerspent = customers.filter((customer) =>
+//     customer.gender == "Male"
+//  );
+// const totalSpentByMales = Customerspent.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue.totalSpent 
+// }, 0)
+// console.log(totalSpentByMales);
 
-const femaleCustomer = customers.filter((customer) =>{
-    return customer.gender == "Female"
-});
-const totalSpentByFemales = femaleCustomer.reduce((accumulator, currentValue) =>{
-    return accumulator + currentValue.totalSpent
-}, 0)
-console.log(totalSpentByFemales);
+// const femaleCustomer = customers.filter((customer) =>{
+//     return customer.gender == "Female"
+// });
+// const totalSpentByFemales = femaleCustomer.reduce((accumulator, currentValue) =>{
+//     return accumulator + currentValue.totalSpent
+// }, 0)
+// console.log(totalSpentByFemales);
 
-const averageAge = customers.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.age
-}, 0) / customers.length;
-console.log(averageAge);
-const numberofFemales = customers.filter((customer) =>{
-    return customer.gender === "Female"
-}).length;
+// const averageAge = customers.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue.age
+// }, 0) / customers.length;
+// console.log(averageAge);
+// const numberofFemales = customers.filter((customer) =>{
+//     return customer.gender === "Female"
+// }).length;
 
-const averageAgeofFemale = customers.filter((customer) => { 
-    return customer.gender === "Female" 
-}).reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.age
-}, 0) /numberofFemales
-console.log(averageAgeofFemale);
+// const averageAgeofFemale = customers.filter((customer) => { 
+//     return customer.gender === "Female" 
+// }).reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue.age
+// }, 0) /numberofFemales
+// console.log(averageAgeofFemale);
 
-const numberofMales = customers.filter((customer) =>{
-    return customer.gender === "Male"
-}).length;
+// const numberofMales = customers.filter((customer) =>{
+//     return customer.gender === "Male"
+// }).length;
 
-const averageAgeofMale = customers.filter((customer) => {
-    return customer.gender === "Male"
-}).reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.age
-}, 0) / numberofMales
-console.log(averageAgeofMale);
+// const averageAgeofMale = customers.filter((customer) => {
+//     return customer.gender === "Male"
+// }).reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue.age
+// }, 0) / numberofMales
+// console.log(averageAgeofMale);
 
-const highestSpender = customers.reduce((highest, current) => {
-    return current.totalSpent > highest.totalSpent ? current : highest;
-}, customers[0]);
+// const highestSpender = customers.reduce((highest, current) => {
+//     return current.totalSpent > highest.totalSpent ? current : highest;
+// }, customers[0]);
 
-console.log(highestSpender);
+// console.log(highestSpender);
 
-let highestSpend = 0
+// let highestSpend = 0
 
-for(let i = 0; i < customers.length; i++){
-    if(customers[i].totalSpent > highestSpend){
-        highestSpend = customers[i].totalSpent;
-    }
-}
-const highestspenders = customers.filter((customer) =>{
-    return customer.totalSpent === highestSpend
-}) ;
-console.log(highestspenders);
+// for(let i = 0; i < customers.length; i++){
+//     if(customers[i].totalSpent > highestSpend){
+//         highestSpend = customers[i].totalSpent;
+//     }
+// }
+// const highestspenders = customers.filter((customer) =>{
+//     return customer.totalSpent === highestSpend
+// }) ;
+// console.log(highestspenders);
+
+//findIndex
+//chaining - using the dot notation or variable
+
+// const usersDB4 = [
+//     {id:1, name: Juliet},
+//     {id:2, name: Favour},
+//     {id:3, name: Richard}
+// ]
+
+// usersDB4.forEach( (item) =>{
+//     item.school = "ighub"
+// });
+
+// userDB4.map( (item) =>{
+//     if(item === "Wisdom"){
+//         item.gender = 'male'
+//     }
+    
+//     if(item === "Richard"){
+//         item.gender = 'male'
+//     }
+    
+//     if(item === "Alice"){
+//         item.gender = 'female'
+//     }
+//     return item
+// }).filter( (item) =>{
+//     return item.gender === 'male'
+// }).reduce((acc, curr) =>{
+//     acc.push(curr.name)
+//     return acc
+// }, []).includes('Richard')
+
+// const counter = ViewTransitionTypeSet.reduce((acc, curr) =>{
+//     if(!acc.yes){
+//         acc.yes = 0
+//     }
+
+//     if(!acc.no){
+//         acc.no = 0
+//     }
+
+//     if(curr === 'yes'){
+//         acc.yes = acc.yes + 1
+//     }
+
+//     if(curr === 'no'){
+//         acc.no = acc.no + 1
+//     }
+
+//     return acc
+// }, {})
+
+// console.log(counter);
+
+//sorting
+//The comparator functionis a function that uses a callback
+//with the two parameter
+//the array using what is being returned
+
+// const numSorted = [1,7,11,4,3,7,8].sort( (a,b)=>{
+//     if(a< b){
+//         return 1
+//     } else if (a > b){
+//         return -1
+//     } else {
+//         return 0
+//     }
+// })
+// console.log(numSorted);
+
+//? We can write shoter callback function
+//  How do we swap items in an array
+
+// const stringArray = ['banana', 'Apple', 'cherry']
+// let holsThis = stringArray[1]
+// stringArray[1] = stringArray[0]
+// stringArray[0]= holdThis
+// console.log(stringArray);
+
+// const stringArray = ['banana', 'Apple', 'cherry']
+// console.log( stringArray)
+
+//localcompare() - compares two strings in the current locale it compare two strn befor converting them to lower case and then returns a number indicating whether the first string comes before, after, or is the same as the second string in sort order. It is used to sort strings in a way that is sensitive to the language and culture of the user.
+
+//without .localCompare(), all uppercase letters get sorted before lowerscase and comparison i done `
+
+// console.log("a".localeCompare("b"));
+// console.log("b".localeCompare("a"));
+// console.log("a".localeCompare("a"));
+
+// const testArray = ['a', 'b', 'c', 'd', 'e']
+// let count = 0;
+// for(i =0; i < testArray.length; i++){
+//     for(j = 0; j < testArray.length; j++){
+//         console.log(testArray[i], testArray[j]);
+//         count++
+//     }
+// }
+// console.log(count);
+
+// const users = [
+//     {name: 'Bob', age: 25},
+//     {name: 'Cara', age: 35},
+//     {name: 'Chiamaka', age: 25},
+//     {name: 'Cara', age: 35},
+//     {name: 'Alice', age: 30},
+// ]
+
+// // const userByAge = users.sort( (a,b)=> {
+// // return b.age - a.age
+// // })
+// // console.log(userByAge);
+
+// const userByAge = users.sort( (a,b)=> {
+// return a.name.length - b.name.length
+// })
+// console.log(userByAge);
+
+// const people = [
+//   { firstName: 'Alice',  lastName: 'Smith',   age: 30 },
+//   { firstName: 'Bob',    lastName: 'Jones',   age: 25 },
+//   { firstName: 'Cara',   lastName: 'Smith',   age: 35 },
+//   { firstName: 'David',  lastName: 'Brown',   age: 25 },
+//   { firstName: 'Eve',    lastName: 'Jones',   age: 28 },
+//   { firstName: 'Frank',  lastName: 'Smith',   age: 25 },
+//   { firstName: 'Grace',  lastName: 'Brown',   age: 35 },
+//   { firstName: 'Heidi',  lastName: 'Adams',   age: 28 },
+// ]
+
+//? Complete the following tasks
+// Sort the Array using firstName
+// Sort the Array using lastname
+// Sort the Array using Age
+// Sort the Array using all the properties at the same time 
+
+// const sortedByFirstName = people.toSorted((a, b) =>
+//   a.firstName.localeCompare(b.firstName)
+// );
+
+// console.log(sortedByFirstName);
+
+// const sortedByLastName = people.toSorted((a, b) =>
+//   a.lastName.localeCompare(b.lastName)
+// );
+// console.log(sortedByLastName);
+
+
+// const sortedByAge = people.toSorted((a, b) => a.age - b.age);
+
+// console.log(sortedByAge)
+
+// const sortedPeople = people.toSorted((a, b) =>{
+//   return(a.firstName.localeCompare(b.firstName) ||
+//    lastName.localeCompare(b.lasttName) ||
+//   a.age - b.age
+// ) 
+// });
+
+// console.log(sortedPeople);
+
+//imutable Sorting and Reversing
+//WE don't want to change the original array
+
+// console.log(months.with(0, 'Sep'));
+// console.log(months.with(-1, 'Jun'));
+
+//Forin
+
+// const user = {
+//     name: "Richard",
+//     state: "Abia",
+//     activeStatus: true,
+//     gender: 'male'
+// }
+
+// for(pro in user){
+//     console.log(`${key}: ${user[key]}`);
+    
+// 
+
+const people = [
+  { firstName: 'Alice',  lastName: 'Smith',   age: 30 },
+  { firstName: 'Bob',    lastName: 'Jones',   age: 25 },
+  { firstName: 'Cara',   lastName: 'Smith',   age: 35 },
+  { firstName: 'David',  lastName: 'Brown',   age: 25 },
+  { firstName: 'Eve',    lastName: 'Jones',   age: 28 },
+  { firstName: 'Frank',  lastName: 'Smith',   age: 25 },
+  { firstName: 'Grace',  lastName: 'Brown',   age: 35 },
+  { firstName: 'Heidi',  lastName: 'Adams',   age: 28 },
+]
+
+//? Object Destructuring
+const {firstName, age } = people[0]
+console.log(firstName);
+console.log(age);
+
+//? Array Destructuring
+const [firstObj, secondObj, thirdObj, fourthObj] = people
+console.log(firstObj);
+console.log(secondObj);
+console.log(thirdObj);
+console.log(fourthObj);
+
+const employees = [
+    { name: 'Richard', dept: 'Engineering', salary: 100000},
+    { name: 'Chiamaka', dept: 'Marketing', salary: 300000},
+    { name: 'Ckay', dept: 'Engineering', salary: 200000},
+    { name: 'Favour', dept: 'Management', salary: 300000},
+    { name: 'Solace', dept: 'Marketing', salary: 300000},
+    { name: 'Juliet', dept: 'HR', salary: 300000},
+]
+// const groupByDept = Object.groupBy({dept} => {
+//     return {dept}})
+
+
+const testArray = new Array(5)
+console.log(testArray);
+
+testArray[0] = 'Fear Fear'
+testArray.push = ('Fear')
+console.log(testArray)
+
+//We can use .fill()to fill an empty
+testArray.fill({test: 'value'})
+console.log(testArray)
+
+//HTML collection
+const listItems =document.getElementsByClassName('item')
+//Nodelist
+const listItems2 =document.getElementById('list').childNodes
+
+console.log(listItems);
+console.log(listItems2);
+
+console.log(listItems.forEach( (item) => {
+  console.log(item);
+  
+}));
