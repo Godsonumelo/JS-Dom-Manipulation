@@ -829,7 +829,31 @@ const listItems2 =document.getElementById('list').childNodes
 console.log(listItems);
 console.log(listItems2);
 
-console.log(listItems.forEach( (item) => {
-  console.log(item);
+// console.log(listItems.forEach( (item) => {
+//   console.log(item);
   
-}));
+// }));
+
+
+//Array.isArray() - returns true or false
+//check whether the argument is an array
+
+console.log(Array.isArray('String'))
+
+function checkArray(array){
+ 
+  if(Array.isArray(array)){
+    console.log('This is an array');
+    
+  }else{
+    console.log('THis is not an array');
+    
+  }
+}
+
+checkArray(1)
+checkArray({some: 'thing'})
+checkArray([1,3,4,5,6])
+checkArray('String ............')
+
+//import and export
