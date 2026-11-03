@@ -98,7 +98,7 @@
 // }
 // setTimeout(callback,3000)
 
-setTimeout(console.log,3000, "This print after my money")
+// setTimeout(console.log,3000, "This print after my money")
 
 //pass by value is something that is resolved by js without going to the heap
 //pass by refrerence is something that is resolved by js by going to the heap 
@@ -110,6 +110,6 @@ setTimeout(console.log,3000, "This print after my money")
 
 // setInterval is a function that is used to execute a function repeatedly after a certain interval of time, it takes in two arguments, the first argument is a function and the second argument is the interval time in milliseconds.
 
-Element.addEventListener('click', function(){
- //something
-})
+// Element.addEventListener('click', function(){
+//  //something
+// })

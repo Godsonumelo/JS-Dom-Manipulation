@@ -327,25 +327,25 @@
 
 //call back function
 
-function calc (value1, value2, func){
-   return func(value1, value2);
-}
+// function calc (value1, value2, func){
+//    return func(value1, value2);
+// }
 
-function add(a , b){
-    let sum = a + b;
-    return sum;
-}
+// function add(a , b){
+//     let sum = a + b;
+//     return sum;
+// }
 
-function sub(a, b){
-    let product = a -b;
-    return product;
-}
+// function sub(a, b){
+//     let product = a -b;
+//     return product;
+// }
 
-function mult(a, b){
-    let value = a * b;
-    return value;
-}
+// function mult(a, b){
+//     let value = a * b;
+//     return value;
+// }
 
-console.log(calc(3,4, add));
-console.log(calc(4,5, sub));
-console.log(calc(5,8, mult))
+// console.log(calc(3,4, add));
+// console.log(calc(4,5, sub));
+// console.log(calc(5,8, mult))

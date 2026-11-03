@@ -775,85 +775,85 @@
     
 // 
 
-const people = [
-  { firstName: 'Alice',  lastName: 'Smith',   age: 30 },
-  { firstName: 'Bob',    lastName: 'Jones',   age: 25 },
-  { firstName: 'Cara',   lastName: 'Smith',   age: 35 },
-  { firstName: 'David',  lastName: 'Brown',   age: 25 },
-  { firstName: 'Eve',    lastName: 'Jones',   age: 28 },
-  { firstName: 'Frank',  lastName: 'Smith',   age: 25 },
-  { firstName: 'Grace',  lastName: 'Brown',   age: 35 },
-  { firstName: 'Heidi',  lastName: 'Adams',   age: 28 },
-]
+// const people = [
+//   { firstName: 'Alice',  lastName: 'Smith',   age: 30 },
+//   { firstName: 'Bob',    lastName: 'Jones',   age: 25 },
+//   { firstName: 'Cara',   lastName: 'Smith',   age: 35 },
+//   { firstName: 'David',  lastName: 'Brown',   age: 25 },
+//   { firstName: 'Eve',    lastName: 'Jones',   age: 28 },
+//   { firstName: 'Frank',  lastName: 'Smith',   age: 25 },
+//   { firstName: 'Grace',  lastName: 'Brown',   age: 35 },
+//   { firstName: 'Heidi',  lastName: 'Adams',   age: 28 },
+// ]
 
-//? Object Destructuring
-const {firstName, age } = people[0]
-console.log(firstName);
-console.log(age);
+// //? Object Destructuring
+// const {firstName, age } = people[0]
+// console.log(firstName);
+// console.log(age);
 
-//? Array Destructuring
-const [firstObj, secondObj, thirdObj, fourthObj] = people
-console.log(firstObj);
-console.log(secondObj);
-console.log(thirdObj);
-console.log(fourthObj);
+// //? Array Destructuring
+// const [firstObj, secondObj, thirdObj, fourthObj] = people
+// console.log(firstObj);
+// console.log(secondObj);
+// console.log(thirdObj);
+// console.log(fourthObj);
 
-const employees = [
-    { name: 'Richard', dept: 'Engineering', salary: 100000},
-    { name: 'Chiamaka', dept: 'Marketing', salary: 300000},
-    { name: 'Ckay', dept: 'Engineering', salary: 200000},
-    { name: 'Favour', dept: 'Management', salary: 300000},
-    { name: 'Solace', dept: 'Marketing', salary: 300000},
-    { name: 'Juliet', dept: 'HR', salary: 300000},
-]
-// const groupByDept = Object.groupBy({dept} => {
-//     return {dept}})
+// const employees = [
+//     { name: 'Richard', dept: 'Engineering', salary: 100000},
+//     { name: 'Chiamaka', dept: 'Marketing', salary: 300000},
+//     { name: 'Ckay', dept: 'Engineering', salary: 200000},
+//     { name: 'Favour', dept: 'Management', salary: 300000},
+//     { name: 'Solace', dept: 'Marketing', salary: 300000},
+//     { name: 'Juliet', dept: 'HR', salary: 300000},
+// ]
+// // const groupByDept = Object.groupBy({dept} => {
+// //     return {dept}})
 
 
-const testArray = new Array(5)
-console.log(testArray);
+// const testArray = new Array(5)
+// console.log(testArray);
 
-testArray[0] = 'Fear Fear'
-testArray.push = ('Fear')
-console.log(testArray)
+// testArray[0] = 'Fear Fear'
+// testArray.push = ('Fear')
+// console.log(testArray)
 
-//We can use .fill()to fill an empty
-testArray.fill({test: 'value'})
-console.log(testArray)
+// //We can use .fill()to fill an empty
+// testArray.fill({test: 'value'})
+// console.log(testArray)
 
-//HTML collection
-const listItems =document.getElementsByClassName('item')
-//Nodelist
-const listItems2 =document.getElementById('list').childNodes
+// //HTML collection
+// const listItems =document.getElementsByClassName('item')
+// //Nodelist
+// const listItems2 =document.getElementById('list').childNodes
 
-console.log(listItems);
-console.log(listItems2);
+// console.log(listItems);
+// console.log(listItems2);
 
-// console.log(listItems.forEach( (item) => {
-//   console.log(item);
+// // console.log(listItems.forEach( (item) => {
+// //   console.log(item);
   
-// }));
+// // }));
 
 
-//Array.isArray() - returns true or false
-//check whether the argument is an array
+// //Array.isArray() - returns true or false
+// //check whether the argument is an array
 
-console.log(Array.isArray('String'))
+// console.log(Array.isArray('String'))
 
-function checkArray(array){
+// function checkArray(array){
  
-  if(Array.isArray(array)){
-    console.log('This is an array');
+//   if(Array.isArray(array)){
+//     console.log('This is an array');
     
-  }else{
-    console.log('THis is not an array');
+//   }else{
+//     console.log('THis is not an array');
     
-  }
-}
+//   }
+// }
 
-checkArray(1)
-checkArray({some: 'thing'})
-checkArray([1,3,4,5,6])
-checkArray('String ............')
+// checkArray(1)
+// checkArray({some: 'thing'})
+// checkArray([1,3,4,5,6])
+// checkArray('String ............')
 
 //import and export
